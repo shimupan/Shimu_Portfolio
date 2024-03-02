@@ -1,11 +1,11 @@
-import { FloatingHeader } from '@/components';
+import { FloatingHeader, Hero } from '@/components';
 import { IoMdHome, IoMdPerson, IoMdListBox, IoMdMail } from 'react-icons/io';
 
 export default function Home() {
    return (
       <main>
          <FloatingHeader navItems={HeaderItems} />
-         hello
+         <Hero />
       </main>
    );
 }

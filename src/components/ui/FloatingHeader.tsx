@@ -77,5 +77,3 @@ export const FloatingHeader = ({
       </AnimatePresence>
    );
 };
-
-export default FloatingHeader;
