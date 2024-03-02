@@ -39,8 +39,7 @@ export const FloatingHeader = ({
          if (direction < 0 || direction == 1) {
             setVisible(true);
          } else {
-            //setVisible(false);
-            setVisible(true);
+            setVisible(false);
          }
       }
    });
