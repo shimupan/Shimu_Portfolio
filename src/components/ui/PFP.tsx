@@ -79,14 +79,20 @@ export const PFP = ({
                      </motion.div>
                   )}
                </AnimatePresence>
-               <Image
-                  onMouseMove={handleMouseMove}
-                  height={800}
-                  width={600}
-                  src={item.image}
-                  alt={item.name}
-                  className='object-cover !m-0 !p-0 object-top rounded-full h-24 w-24 border-2 group-hover:scale-105 group-hover:z-30 border-purple-500 relative transition duration-500'
-               />
+               <motion.div
+                  initial={{ opacity: 0, scale: 0 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.1, duration: 1.5 }}
+               >
+                  <Image
+                     onMouseMove={handleMouseMove}
+                     height={800}
+                     width={600}
+                     src={item.image}
+                     alt={item.name}
+                     className='object-cover !m-0 !p-0 object-top rounded-full h-24 w-24 border-2 group-hover:scale-105 group-hover:z-30 border-purple-500 relative transition duration-500'
+                  />
+               </motion.div>
             </div>
          ))}
       </>
