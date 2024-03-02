@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Lato } from 'next/font/google';
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+const lato = Lato({ subsets: ['latin'], weight: ['900']});
 
 export const metadata: Metadata = {
    title: 'Shimu Pan',
@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
    return (
       <html lang='en'>
-         <body className={inter.className} suppressHydrationWarning={true}>
+         <body className={lato.className} suppressHydrationWarning={true}>
             {children}
          </body>
       </html>

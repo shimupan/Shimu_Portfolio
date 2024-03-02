@@ -32,7 +32,6 @@ export const FloatingHeader = ({
       // Check if current is not undefined and is a number
       if (typeof current === 'number') {
          let direction = current! - scrollYProgress.getPrevious()!;
-         console.log(direction);
          if (direction < 0 || direction == 1) {
             setVisible(true);
          } else {

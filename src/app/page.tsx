@@ -1,4 +1,6 @@
-import { FloatingHeader, Hero } from '@/components';
+"use client";
+
+import { About, FloatingHeader, Hero } from '@/components';
 import { IoMdHome, IoMdPerson, IoMdListBox, IoMdMail } from 'react-icons/io';
 
 export default function Home() {
@@ -6,6 +8,7 @@ export default function Home() {
       <main>
          <FloatingHeader navItems={HeaderItems} />
          <Hero />
+         <About />
       </main>
    );
 }

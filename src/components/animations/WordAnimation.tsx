@@ -70,7 +70,6 @@ export const WordAnimation: React.FC<WordAnimationProps> = ({
          }
       });
    }
-   console.log(wordsObj);
    return (
       <motion.div
          style={{ overflow: 'hidden', display: 'flex' }}

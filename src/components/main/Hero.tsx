@@ -7,7 +7,7 @@ import { FaLinkedin, FaGithub } from 'react-icons/fa';
 export const Hero = () => {
    return (
       <>
-         <div className='h-screen relative w-full overflow-hidden bg-slate-900 flex flex-col items-center justify-center'>
+         <div className='h-screen relative w-full overflow-hidden bg-slate-900 flex flex-col items-center justify-center' id='hero'>
             <div className='absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none' />
             <PFP
                items={[
@@ -69,9 +69,6 @@ export const Hero = () => {
                   'linear-gradient(106.89deg, rgba(192, 132, 252, 0.11) 15.73%, rgba(14, 165, 233, 0.41) 15.74%, rgba(232, 121, 249, 0.26) 56.49%, rgba(79, 70, 229, 0.4) 115.91%)',
             }}
          ></div>
-         <div className='h-screen w-screen'>
-
-         </div>
       </>
    );
 };
