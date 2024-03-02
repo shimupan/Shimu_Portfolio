@@ -47,7 +47,7 @@ const ProjectList = [
       name: 'Watchey (Personal Project)',
       description:
          'Fullstack e-commerce Store where you can search and purchase expensive luxury watches. Complete with Stripe Payment and Checkout.',
-      image: 'https://raw.githubusercontent.com/shimupan/Watchey/main/public/readme/HomePage.png?token=GHSAT0AAAAAACKRXE3BO3Y4TORE5QIVRWIOZPDMJBQ',
+      image: 'https://res.cloudinary.com/ddwqqjmyo/image/upload/v1709409543/profile_pictures/aei6lvtznrolhczhjwpe.png',
       link: 'https://watchey-live.vercel.app/',
       github: 'https://github.com/shimupan/Watchey',
    },
