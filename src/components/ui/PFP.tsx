@@ -90,6 +90,7 @@ export const PFP = ({
                      width={600}
                      src={item.image}
                      alt={item.name}
+                     priority={true}
                      className='object-cover !m-0 !p-0 object-top rounded-full h-24 w-24 border-2 group-hover:scale-105 group-hover:z-30 border-purple-500 relative transition duration-500'
                   />
                </motion.div>

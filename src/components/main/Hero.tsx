@@ -1,14 +1,31 @@
 'use client';
 
+import { Dispatch, SetStateAction, useEffect } from 'react';
 import { PFP, BG, WordAnimation } from '@/components';
 import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { set } from 'react-hook-form';
 
-export const Hero = () => {
+export const Hero = ({
+   setActiveSection,
+}: {
+   setActiveSection: Dispatch<SetStateAction<string>>;
+}) => {
+   const { ref, inView } = useInView();
+   useEffect(() => {
+      if (inView) {
+         setActiveSection('Home');
+      }
+   }, [setActiveSection,inView]);
+
    return (
       <>
-         <div className='h-screen relative w-full overflow-hidden bg-slate-900 flex flex-col items-center justify-center' id='hero'>
-            <div className='absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none' />
+         <div
+            className='h-screen relative w-full overflow-hidden bg-slate-900 flex flex-col items-center justify-center'
+            id='hero'
+         >
+            <div className='absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none' ref={ref}/>
             <PFP
                items={[
                   {

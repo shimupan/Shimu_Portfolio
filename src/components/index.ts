@@ -1,7 +1,11 @@
 export { Hero } from '@/components/main/Hero';
 export { About } from '@/components/main/About';
+export { Projects } from '@/components/main/Projects';
+export { Contact } from '@/components/main/Contact';
 export { FloatingHeader } from '@/components/ui/FloatingHeader'
 export { PFP } from '@/components/ui/PFP';
 export { BG } from '@/components/ui/Background';
 export { SkillCards } from '@/components/ui/SkillCards';
 export { WordAnimation } from '@/components/animations/WordAnimation';
+export { CardWrapper } from '@/components/ui/Card';
+export { BackgroundBeam } from '@/components/ui/BackgroundBeam';

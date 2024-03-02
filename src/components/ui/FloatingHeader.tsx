@@ -1,13 +1,13 @@
 'use client';
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, Dispatch, SetStateAction} from 'react';
 import {
    motion,
    AnimatePresence,
    useScroll,
    useMotionValueEvent,
 } from 'framer-motion';
+import { Link } from 'react-scroll';
 import { cn } from '@/utils/cn';
-import Link from 'next/link';
 
 const variants = {
    hidden: { opacity: 0, x: -100 },
@@ -17,6 +17,8 @@ const variants = {
 export const FloatingHeader = ({
    navItems,
    className,
+   activeSection,
+   setActiveSection,
 }: {
    navItems: {
       name: string;
@@ -24,6 +26,8 @@ export const FloatingHeader = ({
       icon: JSX.Element;
    }[];
    className?: string;
+   activeSection: string;
+   setActiveSection: Dispatch<SetStateAction<string>>;
 }) => {
    const { scrollYProgress } = useScroll();
    const [visible, setVisible] = useState(true);
@@ -35,7 +39,8 @@ export const FloatingHeader = ({
          if (direction < 0 || direction == 1) {
             setVisible(true);
          } else {
-            setVisible(false);
+            //setVisible(false);
+            setVisible(true);
          }
       }
    });
@@ -73,10 +78,19 @@ export const FloatingHeader = ({
                   }}
                >
                   <Link
+                     to={navItem.link}
+                     smooth={true}
+                     duration={200}
+                     spy={true}
+                     activeClass='active'
                      key={`link=${idx}`}
-                     href={navItem.link}
+                     href={'#' + navItem.link}
+                     onClick={() => setActiveSection(navItem.name)}
                      className={cn(
-                        'relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500'
+                        'relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-purple-400 hover:text-purple-400',
+                        {
+                           'text-purple-400': activeSection === navItem.name,
+                        }
                      )}
                   >
                      <span className='block sm:hidden'>{navItem.icon}</span>

@@ -1,5 +1,6 @@
 'use client';
 
+import { Dispatch, SetStateAction, useEffect } from 'react';
 import { SkillCards } from '@/components';
 import { motion } from 'framer-motion';
 import { FaPython } from 'react-icons/fa';
@@ -13,23 +14,35 @@ import {
    SiNodedotjs,
    SiTypescript,
 } from 'react-icons/si';
+import { useInView } from 'react-intersection-observer';
 import { Roboto } from 'next/font/google';
+import { set } from 'react-hook-form';
 
 const roboto = Roboto({ subsets: ['latin'], weight: ['400'] });
 
-export const About = () => {
+export const About = ({
+   setActiveSection,
+}: {
+   setActiveSection: Dispatch<SetStateAction<string>>;
+}) => {
+   const { ref, inView } = useInView();
+
+   useEffect(() => {
+      if (inView) {
+         setActiveSection('About');
+      }
+   }, [setActiveSection, inView]);
    return (
       <>
-         <section className='h-screen max-w-5xl mx-auto' id='about'>
+         <section className='h-auto md:h-screen max-w-5xl mx-auto' id='about'>
             <motion.div
                initial={{ opacity: 0 }}
                animate={{ opacity: 1 }}
                className='flex justify-center'
             >
                <div className='text-4xl text-white mt-24'>About</div>
-               <div></div>
             </motion.div>
-            <div className='md:flex flex-row gap-16 px-4 lg:px-0'>
+            <div className='md:flex flex-row gap-16 px-4 lg:px-0' ref={ref}>
                <motion.div
                   initial={{ opacity: 0, y: -100 }}
                   animate={{ opacity: 1, y: 0 }}

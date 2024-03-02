@@ -1,14 +1,22 @@
-"use client";
+'use client';
 
-import { About, FloatingHeader, Hero } from '@/components';
+import { About, FloatingHeader, Hero, Projects, Contact } from '@/components';
 import { IoMdHome, IoMdPerson, IoMdListBox, IoMdMail } from 'react-icons/io';
+import { useState } from 'react';
 
 export default function Home() {
+   const [activeSection, setActiveSection] = useState('Home');
    return (
       <main>
-         <FloatingHeader navItems={HeaderItems} />
-         <Hero />
-         <About />
+         <FloatingHeader
+            navItems={HeaderItems}
+            activeSection={activeSection}
+            setActiveSection={setActiveSection}
+         />
+         <Hero setActiveSection={setActiveSection} />
+         <About setActiveSection={setActiveSection} />
+         <Projects setActiveSection={setActiveSection} />
+         <Contact setActiveSection={setActiveSection} />
       </main>
    );
 }
@@ -16,22 +24,22 @@ export default function Home() {
 const HeaderItems = [
    {
       name: 'Home',
-      link: '/',
+      link: 'hero',
       icon: <IoMdHome></IoMdHome>,
    },
    {
       name: 'About',
-      link: '/about',
+      link: 'about',
       icon: <IoMdPerson></IoMdPerson>,
    },
    {
       name: 'Projects',
-      link: '/projects',
+      link: 'Project',
       icon: <IoMdListBox></IoMdListBox>,
    },
    {
       name: 'Contact',
-      link: '/contact',
+      link: 'Contact',
       icon: <IoMdMail></IoMdMail>,
    },
 ];
