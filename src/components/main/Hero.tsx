@@ -1,7 +1,7 @@
 'use client';
 
 import { Dispatch, SetStateAction, useEffect } from 'react';
-import { PFP, BG, WordAnimation } from '@/components';
+import { PFP, BG, WordAnimation, Button } from '@/components';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
@@ -78,6 +78,12 @@ export const Hero = ({
                   />
                </motion.a>
             </div>
+            <a href={'https://api.shimupan.com/shimu_resume.pdf'} 
+               target='_blank' 
+               className='z-50 mt-4'
+            >
+               <Button />
+            </a>
          </div>
          <div
             className='absolute inset-0 ml-36 mt-44 max-w-xs h-[357px] blur-[118px] sm:max-w-md md:max-w-lg pointer-events-none'

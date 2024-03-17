@@ -9,3 +9,4 @@ export { SkillCards } from '@/components/ui/SkillCards';
 export { WordAnimation } from '@/components/animations/WordAnimation';
 export { CardWrapper } from '@/components/ui/Card';
 export { BackgroundBeam } from '@/components/ui/BackgroundBeam';
+export { Button } from '@/components/ui/Button';
