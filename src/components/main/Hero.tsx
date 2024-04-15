@@ -78,7 +78,7 @@ export const Hero = ({
                   />
                </motion.a>
             </div>
-            <a href={'https://api.shimupan.com/shimu_resume.pdf'} 
+            <a href={'https://api.shimupan.com/Shimu_Resume.pdf'} 
                target='_blank' 
                className='z-50 mt-4'
             >
