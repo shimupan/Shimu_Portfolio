@@ -62,7 +62,7 @@ export const Contact = ({
    return (
       <>
          <section
-            className='mt-24 md:mt-0 h-screen max-w-4xl mx-auto'
+            className=' md:mt-0 h-screen max-w-4xl mx-auto pt-16'
             id='Contact'
          >
             <div className='text-4xl text-white text-center'>Contact</div>

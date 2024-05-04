@@ -13,7 +13,9 @@ export default function Home() {
             activeSection={activeSection}
             setActiveSection={setActiveSection}
          />
+      
          <Hero setActiveSection={setActiveSection} />
+
          <About setActiveSection={setActiveSection} />
          <Projects setActiveSection={setActiveSection} />
          <Contact setActiveSection={setActiveSection} />

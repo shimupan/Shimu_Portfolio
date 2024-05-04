@@ -16,7 +16,6 @@ import {
 } from 'react-icons/si';
 import { useInView } from 'react-intersection-observer';
 import { Roboto } from 'next/font/google';
-import { set } from 'react-hook-form';
 
 const roboto = Roboto({ subsets: ['latin'], weight: ['400'] });
 
@@ -58,8 +57,12 @@ export const About = ({
                      <span className='text-purple-400'>
                         Rensselaer Polytechnic Institute
                      </span>
-                     , pursuing a Bachelor of Science with a dual major in{' '}
-                     <br />
+                     , pursuing a Bachelor of Science in {' '}
+                     <span className='text-purple-400'>
+                        Computer Science
+                     </span>
+                     {' '}
+                     with a dual major in{' '}
                      <span className='text-purple-400'>
                         Information Technology and Web Science.
                      </span>

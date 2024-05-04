@@ -13,7 +13,7 @@ export const Projects = ({
    return (
       <>
          <section
-            className='h-auto md:h-screen max-w-4xl mx-auto'
+            className='min-h-screen max-w-4xl mx-auto'
             id='Project'
          >
             <div className='text-4xl text-white text-center'>Projects</div>
@@ -53,6 +53,15 @@ const ProjectList = [
    },
    {
       id: 3,
+      name: 'Guess The Imposter (Personal Project)',
+      description:
+         'Online Multiplayer game based off the popular game Guess the Imposter and website JKLM. Utilized Web Sockets to provide real-time gameplay functionality for players.',
+      image: 'https://res.cloudinary.com/ddwqqjmyo/image/upload/v1714794528/profile_pictures/btn8m2n1nznaxoggsahb.png',
+      link: 'https://game.shimupan.com/',
+      github: 'https://github.com/shimupan/GuessTheImposter',
+   },
+   {
+      id: 4,
       name: 'Y.A.C.S (Opensource Contribution)',
       description:
          'Yet Another Course Scheduler is a web application that allows RPI students to plan their course schedules and visualize the course data with a very nice interface.',
@@ -61,7 +70,7 @@ const ProjectList = [
       github: 'https://github.com/YACS-RCOS/yacs.n',
    },
    {
-      id: 4,
+      id: 5,
       name: 'Open Circuits (Opensource Contribution)',
       description:
          'OpenCircuits is a web-based circuit simulator that allows users to create and simulate electronic circuits.',

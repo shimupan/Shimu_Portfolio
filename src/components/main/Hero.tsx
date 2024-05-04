@@ -1,11 +1,10 @@
 'use client';
 
 import { Dispatch, SetStateAction, useEffect } from 'react';
-import { PFP, BG, WordAnimation, Button } from '@/components';
+import { PFP, BG, WordAnimation, Button, BackgroundBeam } from '@/components';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
-import { set } from 'react-hook-form';
 
 export const Hero = ({
    setActiveSection,
@@ -22,7 +21,7 @@ export const Hero = ({
    return (
       <>
          <div
-            className='h-screen relative w-full overflow-hidden bg-slate-900 flex flex-col items-center justify-center'
+            className='h-screen relative w-full overflow-hidden bg-slate-900 flex flex-col items-center justify-center bg-dot-white/[0.2]'
             id='hero'
          >
             <div className='absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none' ref={ref}/>
@@ -36,7 +35,7 @@ export const Hero = ({
                   },
                ]}
             />
-            <BG />
+            
             <img src={''} />
             <WordAnimation
                text="Hi, I'm Shimu Pan."
