@@ -44,6 +44,14 @@ const ProjectList = [
    },
    {
       id: 2,
+      name: 'AI Chess (Personal Project)',
+      description:
+         'A Chess program made in Java following OOP design patterns. Utilized Minimax algorithm with Alpha-Beta pruning to create a Chess AI that can play against a human player.',
+      image: 'https://res.cloudinary.com/ddwqqjmyo/image/upload/v1717555457/profile_pictures/yxye6hqgembo9fkao62c.png',
+      github: 'https://github.com/shimupan/Chess',
+   },
+   {
+      id: 3,
       name: 'Watchey (Personal Project)',
       description:
          'Fullstack e-commerce Store where you can search and purchase expensive luxury watches. Complete with Stripe Payment and Checkout.',
@@ -52,7 +60,7 @@ const ProjectList = [
       github: 'https://github.com/shimupan/Watchey',
    },
    {
-      id: 3,
+      id: 4,
       name: 'Guess The Imposter (Personal Project)',
       description:
          'Online Multiplayer game based off the popular game Guess the Imposter and website JKLM. Utilized Web Sockets to provide real-time gameplay functionality for players.',
@@ -61,7 +69,7 @@ const ProjectList = [
       github: 'https://github.com/shimupan/GuessTheImposter',
    },
    {
-      id: 4,
+      id: 5,
       name: 'Y.A.C.S (Opensource Contribution)',
       description:
          'Yet Another Course Scheduler is a web application that allows RPI students to plan their course schedules and visualize the course data with a very nice interface.',
@@ -70,7 +78,7 @@ const ProjectList = [
       github: 'https://github.com/YACS-RCOS/yacs.n',
    },
    {
-      id: 5,
+      id: 6,
       name: 'Open Circuits (Opensource Contribution)',
       description:
          'OpenCircuits is a web-based circuit simulator that allows users to create and simulate electronic circuits.',

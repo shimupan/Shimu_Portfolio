@@ -26,7 +26,7 @@ export const CardWrapper = ({
       name: string;
       description: string;
       image: string;
-      link: string;
+      link?: string;
       github: string;
    };
    setActiveSection: Dispatch<SetStateAction<string>>;
@@ -76,7 +76,9 @@ export const CardWrapper = ({
                               Demo →
                            </a>
                         ) : (
-                           ''
+                           <p>
+                              Demo →
+                           </p>
                         )}
                      </CardItem>
                   )}
