@@ -28,6 +28,7 @@ export const CardWrapper = ({
       image: string;
       link?: string;
       github: string;
+      technologies: string[];
    };
    setActiveSection: Dispatch<SetStateAction<string>>;
 }) => {
@@ -64,19 +65,32 @@ export const CardWrapper = ({
                      alt='thumbnail'
                   />
                </CardItem>
-               <div className='flex justify-between items-center mt-6'>
-                  {project.link && (
+               <CardItem
+                  translateZ='30'
+                  className='flex flex-wrap gap-1 mt-2'
+               >
+                  {project.technologies.map((tech, index) => (
+                     <span
+                        key={index}
+                        className='bg-[#2b3547] text-[#808ea3] text-[0.8rem] px-2 py-1 rounded'
+                     >
+                        {tech}
+                     </span>
+                  ))}
+               </CardItem>
+               <div className='flex justify-between items-center'>
+                  {(
                      <CardItem
                         translateZ={20}
                         as='button'
-                        className='px-4 py-2 rounded-xl text-s font-normal text-[#808ea3] hover:text-purple-600'
+                        className='px-4 rounded-xl text-s font-normal text-[#808ea3] hover:text-purple-600'
                      >
                         {project.link ? (
                            <a href={project.link} target='_blank'>
-                              Demo →
+                              Live →
                            </a>
                         ) : (
-                           <p>
+                           <p className='hidden cursor-none'>
                               Demo →
                            </p>
                         )}

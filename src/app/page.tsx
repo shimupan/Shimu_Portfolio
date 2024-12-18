@@ -3,6 +3,7 @@
 import { About, FloatingHeader, Hero, Projects, Contact } from '@/components';
 import { IoMdHome, IoMdPerson, IoMdListBox, IoMdMail } from 'react-icons/io';
 import { useState } from 'react';
+import { TracingBeam } from '@/components/ui/tracing-beam';
 
 export default function Home() {
    const [activeSection, setActiveSection] = useState('Home');
@@ -13,12 +14,13 @@ export default function Home() {
             activeSection={activeSection}
             setActiveSection={setActiveSection}
          />
-      
-         <Hero setActiveSection={setActiveSection} />
 
-         <About setActiveSection={setActiveSection} />
-         <Projects setActiveSection={setActiveSection} />
-         <Contact setActiveSection={setActiveSection} />
+         <Hero setActiveSection={setActiveSection} />
+         <TracingBeam>
+            <About setActiveSection={setActiveSection} />
+            <Projects setActiveSection={setActiveSection} />
+            <Contact setActiveSection={setActiveSection} />
+         </TracingBeam>
       </main>
    );
 }

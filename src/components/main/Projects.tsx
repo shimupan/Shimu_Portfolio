@@ -38,10 +38,20 @@ const ProjectList = [
       id: 1,
       name: 'LineupX',
       description:
-         'LineupX is a open-source project aimed at enhancing understanding of FPS games. We provide a platform for rapid sharing and learning of lineups.',
+         'LineupX is a open-source project aimed at enhancing understanding of FPS games.',
       image: 'https://raw.githubusercontent.com/shimupan/lineupx/main/public/HomeScreen.png',
       link: 'https://lineupx.net',
       github: 'https://github.com/shimupan/lineupx',
+      technologies: [
+         'React',
+         'TypeScript',
+         'Tailwind',
+         'Express',
+         'MongoDB',
+         'Node.js',
+         'Docker',
+         'Riot API',
+      ],
    },
    {
       id: 2,
@@ -50,6 +60,7 @@ const ProjectList = [
          'A Chess program made in Java following OOP design patterns. Utilized Minimax algorithm w/ Alpha-Beta pruning to create a competent Chess AI.',
       image: 'https://res.cloudinary.com/ddwqqjmyo/image/upload/v1717555457/profile_pictures/yxye6hqgembo9fkao62c.png',
       github: 'https://github.com/shimupan/Chess',
+      technologies: ['Java', 'Java Swing', 'JUnit'],
    },
    {
       id: 12,
@@ -58,15 +69,32 @@ const ProjectList = [
          'Recreation of the output embedding in the paper "Attention is all you need". Simple remake of GPT 2 that will be trained on your discord messages.',
       image: 'https://res.cloudinary.com/ddwqqjmyo/image/upload/v1734549612/profile_pictures/oskss0vy23rxfagpaqhj.png',
       github: 'https://github.com/shimupan/CustomGPT',
+      technologies: ['Python', 'PyTorch'],
+   },
+   {
+      id: 16,
+      name: 'Wayk',
+      description:
+         'A walking-focused navigation app that helps users find and navigate safer walking routes.',
+      image: 'https://res.cloudinary.com/ddwqqjmyo/image/upload/v1734553199/profile_pictures/xbazficww3baefe7bzug.png',
+      github: 'https://github.com/WaykRPI/Wayk',
+      technologies: [
+         'React Native',
+         'TypeScript',
+         'Expo',
+         'Supabase',
+         'Gemini',
+      ],
    },
    {
       id: 13,
       name: 'Jackpot',
       description:
          'Online casino simulator built to help people struggling with gambling addiction. Aimed to expose the scam of online casinos',
-      image: 'https://res.cloudinary.com/ddwqqjmyo/image/upload/v1734550214/profile_pictures/dop9yujbxd8zwibdbhhl.png',
+      image: 'https://res.cloudinary.com/ddwqqjmyo/image/upload/v1734552248/profile_pictures/dqqib8w4g1cksld1ma5n.png',
       link: 'jackpot.shimupan.com',
       github: 'https://github.com/shimupan/Jackpot',
+      technologies: ['React', 'Node.js', 'Express', 'MongoDB'],
    },
    {
       id: 3,
@@ -76,15 +104,17 @@ const ProjectList = [
       image: 'https://res.cloudinary.com/ddwqqjmyo/image/upload/v1709409543/profile_pictures/aei6lvtznrolhczhjwpe.png',
       link: 'https://watchey-live.vercel.app/',
       github: 'https://github.com/shimupan/Watchey',
+      technologies: ['Next.js', 'TypeScript', 'Stripe'],
    },
    {
       id: 4,
       name: 'Guess The Imposter',
       description:
-         'Online Multiplayer game based off the popular game Guess the Imposter and website JKLM. Utilized Web Sockets to provide real-time gameplay functionality for players.',
+         'Online Multiplayer game based off the popular game Guess the Imposter and website JKLM. Utilized Web Sockets to provide real-time gameplay functionality.',
       image: 'https://res.cloudinary.com/ddwqqjmyo/image/upload/v1714794528/profile_pictures/btn8m2n1nznaxoggsahb.png',
       link: 'https://game.shimupan.com/',
       github: 'https://github.com/shimupan/GuessTheImposter',
+      technologies: ['React', 'Socket.IO', 'Node.js', 'MongoDB'],
    },
    {
       id: 10,
@@ -94,6 +124,15 @@ const ProjectList = [
       image: 'https://raw.githubusercontent.com/shimupan/YT_Clone/main/public/home_screen.png',
       link: 'https://yt-clone-jade.vercel.app',
       github: 'https://github.com/shimupan/YT_Clone',
+      technologies: ['React', 'Node.js'],
+   },
+   {
+      id: 10,
+      name: 'CloneGPT',
+      description: 'Simple Chat GPT Clone.',
+      image: 'https://res.cloudinary.com/ddwqqjmyo/image/upload/v1734553449/profile_pictures/lrezlvxitxhnalwceqnc.png',
+      github: 'https://github.com/shimupan/CloneGPT',
+      technologies: ['Javascript', 'OpenAI API'],
    },
    {
       id: 5,
@@ -103,14 +142,16 @@ const ProjectList = [
       image: 'https://res.cloudinary.com/ddwqqjmyo/image/upload/v1709398512/profile_pictures/wpuztta9dgxotmgfsxps.png',
       link: 'https://yacs.cs.rpi.edu/',
       github: 'https://github.com/YACS-RCOS/yacs.n',
+      technologies: ['Vue', 'Python', 'PostgreSQL'],
    },
    {
       id: 6,
       name: 'Open Circuits (Opensource Contribution)',
       description:
          'OpenCircuits is a web-based circuit simulator that allows users to create and simulate electronic circuits.',
-      image: 'https://camo.githubusercontent.com/b270f241f26a6a50eca1a8f8c620b9ac87ee09b3c43e67bd1dae71deb5aa1846/68747470733a2f2f696d6775722e636f6d2f78426337356a4c2e706e67',
+      image: 'https://res.cloudinary.com/ddwqqjmyo/image/upload/v1734552825/profile_pictures/vtpnsoyrdvlmtzq1foz4.png',
       link: 'https://opencircuits.io/',
       github: 'https://github.com/OpenCircuits/OpenCircuits/',
+      technologies: ['React', 'Typescript', 'Go', 'SQLite'],
    },
 ];
