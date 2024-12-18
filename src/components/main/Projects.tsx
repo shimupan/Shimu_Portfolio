@@ -5,6 +5,17 @@ import { Roboto } from 'next/font/google';
 
 const roboto = Roboto({ subsets: ['latin'], weight: ['700'] });
 
+interface Project {
+   id: number;
+   name: string;
+   description: string;
+   image: string;
+   link?: string;
+   github: string;
+   technologies: string[];
+   featured?: boolean;
+}
+
 export const Projects = ({
    setActiveSection,
 }: {
@@ -56,7 +67,7 @@ export const Projects = ({
    );
 };
 
-const ProjectList = [
+const ProjectList: Project[] = [
    {
       id: 1,
       name: 'LineupX',
@@ -179,5 +190,15 @@ const ProjectList = [
       link: 'https://opencircuits.io/',
       github: 'https://github.com/OpenCircuits/OpenCircuits/',
       technologies: ['React', 'Typescript', 'Go', 'SQLite'],
+   },
+   {
+      id: 17,
+      name: 'Datadog',
+      description: 'Incoming Software Engineer Intern at Datadog for Summer 2025. Will be working on developing and maintaining scalable monitoring and analytics solutions.',
+      image: 'https://res.cloudinary.com/ddwqqjmyo/image/upload/v1709398512/profile_pictures/datadog.png',
+      link: 'https://www.datadoghq.com/',
+      github: 'https://www.datadoghq.com/', // Add a valid github URL or remove if not applicable
+      technologies: ['Go', 'Python', 'Kubernetes', 'Docker'],
+      featured: true,
    },
 ];

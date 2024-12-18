@@ -10,6 +10,7 @@ import {
 } from 'react-icons/si';
 import { useInView } from 'react-intersection-observer';
 import { Roboto } from 'next/font/google';
+import Image from 'next/image';
 
 const roboto = Roboto({ subsets: ['latin'], weight: ['400'] });
 
@@ -112,13 +113,15 @@ export const About = ({
                            <Timeline items={education} />
                         )}
                      </div>
-                     <motion.div
+                     {/*
+                        <motion.div
                         initial={{ opacity: 0, y: 100 }}
                         animate={{ opacity: 1, y: 0 }}
                         className='flex-1'
                      >
                         <SkillCards items={skills} />
                      </motion.div>
+                        */}
                   </div>
                </motion.div>
             </div>
@@ -127,6 +130,17 @@ export const About = ({
    );
 };
 
+interface TimelineItem {
+   date: string;
+   title: string;
+   location: string;
+   description: string;
+   image: {
+      src: string;
+      alt: string;
+   };
+}
+
 const Timeline = ({ items }: { items: TimelineItem[] }) => {
    return (
       <div className="relative border-l border-gray-700 ml-3">
@@ -134,7 +148,17 @@ const Timeline = ({ items }: { items: TimelineItem[] }) => {
             <div key={index} className="mb-8 ml-6">
                <div className="absolute w-3 h-3 bg-purple-500 rounded-full -left-[7px]" />
                <div className="text-purple-400">{item.date}</div>
+               <div className="flex items-center gap-2">
+               <div className="w-6 h-6 relative rounded-full overflow-hidden">
+                  <Image
+                     src={item.image.src}
+                     alt={item.image.alt}
+                     fill
+                     style={{ objectFit: 'contain' }}
+                  />
+               </div>
                <div className="text-white font-medium">{item.title}</div>
+               </div>
                <div className="text-gray-400">{item.location}</div>
                <div className="text-gray-400 mt-2 whitespace-pre-line">{item.description}</div>
             </div>
@@ -143,26 +167,26 @@ const Timeline = ({ items }: { items: TimelineItem[] }) => {
    );
 };
 
-interface TimelineItem {
-   date: string;
-   title: string;
-   location: string;
-   description: string;
-}
-
 const workHistory: TimelineItem[] = [
    {
       date: 'May 2025 - Aug 2025',
       title: 'Datadog',
       location: 'Software Engineer Intern',
       description: 'Incoming Summer 2025 Intern.',
+      image: {
+         src: 'https://static.datadoghq.com/static/images/logos/_datadog_avatar.svg',
+         alt: 'Datadog logo'
+      }
    },
    {
       date: 'Aug 2023 - May 2024',
       title: 'Rensselaer Polytechnic Institute',
       location: 'Undergraduate Computer Science TA',
-      description:
-         'Taught Data Structures and F.O.C.S courses, providing support to students and instructors.',
+      description: 'Taught Data Structures and F.O.C.S courses, providing support to students and instructors.',
+      image: {
+         src: 'https://derekzlee.com/rpi.jpeg',
+         alt: 'RPI logo'
+      }
    },
 ];
 
@@ -172,7 +196,11 @@ const education: TimelineItem[] = [
       title: 'Rensselaer Polytechnic Institute',
       location: 'B.S. in Computer Science',
       description: `3.87 GPA
-Coursework: Data Structures, Algorithms, Operating Systems, Principle of Software`
+Coursework: Data Structures, Algorithms, Operating Systems, Principle of Software`,
+      image: {
+         src: 'https://derekzlee.com/rpi.jpeg',
+         alt: 'RPI logo'
+      }
    },
 ];
 

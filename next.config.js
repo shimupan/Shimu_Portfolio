@@ -6,6 +6,7 @@ module.exports = {
          'raw.githubusercontent.com',
          'camo.githubusercontent.com',
          'github.com',
+         'derekzlee.com',
       ],
    },
 };
