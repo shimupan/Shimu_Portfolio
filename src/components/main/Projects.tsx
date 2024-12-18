@@ -10,17 +10,40 @@ export const Projects = ({
 }: {
    setActiveSection: Dispatch<SetStateAction<string>>;
 }) => {
+   const featuredProjects = ProjectList.filter(project => project.featured);
+   const otherProjects = ProjectList.filter(project => !project.featured);
+
    return (
       <>
          <section className='min-h-screen max-w-4xl mx-auto' id='Project'>
             <div className='text-4xl text-white text-center'>Projects</div>
-            <div
-               className={
-                  'grid grid-cols-1 md:grid-cols-2 px-5 md:px-0 gap-5 mt-9 ' +
-                  roboto.className
-               }
-            >
-               {ProjectList.map((project) => (
+            
+            {/* Featured Projects */}
+            <div className='text-2xl font-bold bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent mt-9 mb-4 px-5 md:px-0'>
+               Featured Projects
+            </div>
+            <div className={
+               'grid grid-cols-1 md:grid-cols-2 px-5 md:px-0 gap-5 ' +
+               roboto.className
+            }>
+               {featuredProjects.map((project) => (
+                  <CardWrapper
+                     key={project.id}
+                     project={project}
+                     setActiveSection={setActiveSection}
+                  />
+               ))}
+            </div>
+
+            {/* Other Projects */}
+            <div className='text-2xl font-bold bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent mt-12 mb-4 px-5 md:px-0'>
+               Other Projects
+            </div>
+            <div className={
+               'grid grid-cols-1 md:grid-cols-2 px-5 md:px-0 gap-5 ' +
+               roboto.className
+            }>
+               {otherProjects.map((project) => (
                   <CardWrapper
                      key={project.id}
                      project={project}
@@ -52,6 +75,7 @@ const ProjectList = [
          'Docker',
          'Riot API',
       ],
+      featured: true,
    },
    {
       id: 2,
@@ -61,6 +85,7 @@ const ProjectList = [
       image: 'https://res.cloudinary.com/ddwqqjmyo/image/upload/v1717555457/profile_pictures/yxye6hqgembo9fkao62c.png',
       github: 'https://github.com/shimupan/Chess',
       technologies: ['Java', 'Java Swing', 'JUnit'],
+      featured: true,
    },
    {
       id: 12,
@@ -85,6 +110,7 @@ const ProjectList = [
          'Supabase',
          'Gemini',
       ],
+      featured: true,
    },
    {
       id: 13,

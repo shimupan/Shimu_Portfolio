@@ -51,7 +51,7 @@ export const About = ({
                >
                   <p className='pb-3'>
                      Hi, I'm <span className='text-purple-400'>Shimu Pan.</span>{' '}
-                     I am a dedicated and passionate 2nd year{' '}
+                     I am a dedicated and passionate senior{' '}
                      <span className='text-purple-400'>Computer Science</span>{' '}
                      student at{' '}
                      <span className='text-purple-400'>
@@ -59,12 +59,7 @@ export const About = ({
                      </span>
                      , pursuing a Bachelor of Science in {' '}
                      <span className='text-purple-400'>
-                        Computer Science
-                     </span>
-                     {' '}
-                     with a dual major in{' '}
-                     <span className='text-purple-400'>
-                        Information Technology and Web Science.
+                        Computer Science.
                      </span>
                   </p>
                   <p className='pb-3'>
@@ -83,59 +78,6 @@ export const About = ({
                         Data Structures and F.O.C.S
                      </span>{' '}
                      (Foundation of Computer Science).
-                  </p>
-                  <p className='pb-3'>
-                     In addition to my academic pursuits, I am deeply passionate
-                     about leveraging technology to create innovative solutions.
-                     I am currently a{' '}
-                     <span className='text-purple-400'>tech lead</span> for the
-                     Open Source project{' '}
-                     <a
-                        className='text-purple-200'
-                        href='https://lineupx.net/'
-                        target='_blank'
-                     >
-                        LineupX
-                     </a>{' '}
-                     and have{' '}
-                     <span className='text-purple-400'>contributed</span> to
-                     multiple open source projects such as{' '}
-                     <a
-                        className='text-purple-200'
-                        href='https://yacs.cs.rpi.edu/'
-                        target='_blank'
-                     >
-                        Y.A.C.S.
-                     </a>{' '}
-                     and{' '}
-                     <a
-                        className='text-purple-200'
-                        href='https://opencircuits.io/'
-                        target='_blank'
-                     >
-                        Open Ciruits.
-                     </a>
-                  </p>
-                  <p className='pb-3'>
-                     I am currently{' '}
-                     <span className='text-purple-400'>
-                        seeking new opportunities
-                     </span>{' '}
-                     between{' '}
-                     <span className='text-purple-400'>
-                        Fall 2025 and Summer 2026.
-                     </span>{' '}
-                     I am open to both{' '}
-                     <span className='text-purple-400'>
-                        internships and co-ops
-                     </span>{' '}
-                     and passionate about learning new technologies and working
-                     on projects that have a positive impact on the world. I am
-                     open to working in a variety of roles,{' '}
-                     <span className='text-purple-400'>
-                        including software engineering, web development, and
-                        data science.
-                     </span>
                   </p>
                </motion.div>
                <motion.div
