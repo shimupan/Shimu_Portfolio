@@ -12,10 +12,7 @@ export const Projects = ({
 }) => {
    return (
       <>
-         <section
-            className='min-h-screen max-w-4xl mx-auto'
-            id='Project'
-         >
+         <section className='min-h-screen max-w-4xl mx-auto' id='Project'>
             <div className='text-4xl text-white text-center'>Projects</div>
             <div
                className={
@@ -24,7 +21,11 @@ export const Projects = ({
                }
             >
                {ProjectList.map((project) => (
-                  <CardWrapper key={project.id} project={project} setActiveSection={setActiveSection}/>
+                  <CardWrapper
+                     key={project.id}
+                     project={project}
+                     setActiveSection={setActiveSection}
+                  />
                ))}
             </div>
          </section>
@@ -35,7 +36,7 @@ export const Projects = ({
 const ProjectList = [
    {
       id: 1,
-      name: 'LineupX (Tech Lead)',
+      name: 'LineupX',
       description:
          'LineupX is a open-source project aimed at enhancing understanding of FPS games. We provide a platform for rapid sharing and learning of lineups.',
       image: 'https://raw.githubusercontent.com/shimupan/lineupx/main/public/HomeScreen.png',
@@ -44,15 +45,32 @@ const ProjectList = [
    },
    {
       id: 2,
-      name: 'AI Chess (Personal Project)',
+      name: 'AI Chess',
       description:
-         'A Chess program made in Java following OOP design patterns. Utilized Minimax algorithm with Alpha-Beta pruning to create a Chess AI that can play against a human player.',
+         'A Chess program made in Java following OOP design patterns. Utilized Minimax algorithm w/ Alpha-Beta pruning to create a competent Chess AI.',
       image: 'https://res.cloudinary.com/ddwqqjmyo/image/upload/v1717555457/profile_pictures/yxye6hqgembo9fkao62c.png',
       github: 'https://github.com/shimupan/Chess',
    },
    {
+      id: 12,
+      name: 'CustomGPT (GPT 2)',
+      description:
+         'Recreation of the output embedding in the paper "Attention is all you need". Simple remake of GPT 2 that will be trained on your discord messages.',
+      image: 'https://res.cloudinary.com/ddwqqjmyo/image/upload/v1734549612/profile_pictures/oskss0vy23rxfagpaqhj.png',
+      github: 'https://github.com/shimupan/CustomGPT',
+   },
+   {
+      id: 13,
+      name: 'Jackpot',
+      description:
+         'Online casino simulator built to help people struggling with gambling addiction. Aimed to expose the scam of online casinos',
+      image: 'https://res.cloudinary.com/ddwqqjmyo/image/upload/v1734550214/profile_pictures/dop9yujbxd8zwibdbhhl.png',
+      link: 'jackpot.shimupan.com',
+      github: 'https://github.com/shimupan/Jackpot',
+   },
+   {
       id: 3,
-      name: 'Watchey (Personal Project)',
+      name: 'Watchey',
       description:
          'Fullstack e-commerce Store where you can search and purchase expensive luxury watches. Complete with Stripe Payment and Checkout.',
       image: 'https://res.cloudinary.com/ddwqqjmyo/image/upload/v1709409543/profile_pictures/aei6lvtznrolhczhjwpe.png',
@@ -61,7 +79,7 @@ const ProjectList = [
    },
    {
       id: 4,
-      name: 'Guess The Imposter (Personal Project)',
+      name: 'Guess The Imposter',
       description:
          'Online Multiplayer game based off the popular game Guess the Imposter and website JKLM. Utilized Web Sockets to provide real-time gameplay functionality for players.',
       image: 'https://res.cloudinary.com/ddwqqjmyo/image/upload/v1714794528/profile_pictures/btn8m2n1nznaxoggsahb.png',
@@ -69,10 +87,19 @@ const ProjectList = [
       github: 'https://github.com/shimupan/GuessTheImposter',
    },
    {
+      id: 10,
+      name: 'YouTube Clone',
+      description:
+         'Simple YouTube clone built with React and supports video playback.',
+      image: 'https://raw.githubusercontent.com/shimupan/YT_Clone/main/public/home_screen.png',
+      link: 'https://yt-clone-jade.vercel.app',
+      github: 'https://github.com/shimupan/YT_Clone',
+   },
+   {
       id: 5,
       name: 'Y.A.C.S (Opensource Contribution)',
       description:
-         'Yet Another Course Scheduler is a web application that allows RPI students to plan their course schedules and visualize the course data with a very nice interface.',
+         'Yet Another Course Scheduler is a web application that allows RPI students to plan their course schedules.',
       image: 'https://res.cloudinary.com/ddwqqjmyo/image/upload/v1709398512/profile_pictures/wpuztta9dgxotmgfsxps.png',
       link: 'https://yacs.cs.rpi.edu/',
       github: 'https://github.com/YACS-RCOS/yacs.n',
